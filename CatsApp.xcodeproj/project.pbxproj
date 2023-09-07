@@ -219,6 +219,7 @@
 				36A6A8DD2AAA019C0085F27C /* Frameworks */,
 				36A6A8DE2AAA019C0085F27C /* Resources */,
 				36A6A9142AAA08970085F27C /* SwiftLint */,
+				02418092C4D5AF56CF099DF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +257,7 @@
 				36A6A8F62AAA019F0085F27C /* Sources */,
 				36A6A8F72AAA019F0085F27C /* Frameworks */,
 				36A6A8F82AAA019F0085F27C /* Resources */,
+				6DFF193A36D6A057CEDEDA7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +339,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02418092C4D5AF56CF099DF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatsApp/Pods-CatsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatsApp/Pods-CatsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatsApp/Pods-CatsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		36A6A9142AAA08970085F27C /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -376,6 +395,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DFF193A36D6A057CEDEDA7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatsApp-CatsAppUITests/Pods-CatsApp-CatsAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CatsApp-CatsAppUITests/Pods-CatsApp-CatsAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CatsApp-CatsAppUITests/Pods-CatsApp-CatsAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		858BEB5E23DCB1850FD967FE /* [CP] Check Pods Manifest.lock */ = {
@@ -693,7 +729,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3590394F82E02AD21AF1C8A0 /* Pods-CatsApp-CatsAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -711,7 +747,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ACC3194F6B023C7FFE8A8B7F /* Pods-CatsApp-CatsAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
