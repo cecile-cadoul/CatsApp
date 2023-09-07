@@ -1,0 +1,8 @@
+excluded:
+  - Pods
+
+# disabled_rules:
+
+# opt_in_rules:
+
+reporter: "xcode"

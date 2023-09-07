@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36A6A8E42AAA019C0085F27C /* CatsAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E32AAA019C0085F27C /* CatsAppApp.swift */; };
+		090815A3E8DD62CA7443652B /* Pods_CatsApp_CatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91BB35BE8C645D1CAD167D23 /* Pods_CatsApp_CatsAppUITests.framework */; };
+		36A6A8E42AAA019C0085F27C /* CatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E32AAA019C0085F27C /* CatsApp.swift */; };
 		36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E52AAA019C0085F27C /* ContentView.swift */; };
 		36A6A8E82AAA019E0085F27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6A8E72AAA019E0085F27C /* Assets.xcassets */; };
 		36A6A8EB2AAA019E0085F27C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6A8EA2AAA019E0085F27C /* Preview Assets.xcassets */; };
 		36A6A8F52AAA019F0085F27C /* CatsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8F42AAA019F0085F27C /* CatsAppTests.swift */; };
 		36A6A8FF2AAA019F0085F27C /* CatsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8FE2AAA019F0085F27C /* CatsAppUITests.swift */; };
 		36A6A9012AAA019F0085F27C /* CatsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A9002AAA019F0085F27C /* CatsAppUITestsLaunchTests.swift */; };
+		48DC8F8D11EDBA96A0A61D97 /* Pods_CatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DC1DA54C1D850AA1C26073 /* Pods_CatsAppTests.framework */; };
+		BA82B77548378A2EC8FD717E /* Pods_CatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F29895D8A18E1BD8488A8 /* Pods_CatsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021F8A02D06B7C19818544D5 /* Pods-CatsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsAppTests.release.xcconfig"; path = "Target Support Files/Pods-CatsAppTests/Pods-CatsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B41377E42F483C82FCD5CE2 /* Pods-CatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsApp.release.xcconfig"; path = "Target Support Files/Pods-CatsApp/Pods-CatsApp.release.xcconfig"; sourceTree = "<group>"; };
+		3590394F82E02AD21AF1C8A0 /* Pods-CatsApp-CatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsApp-CatsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatsApp-CatsAppUITests/Pods-CatsApp-CatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		36A6A8E02AAA019C0085F27C /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		36A6A8E32AAA019C0085F27C /* CatsAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppApp.swift; sourceTree = "<group>"; };
+		36A6A8E32AAA019C0085F27C /* CatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsApp.swift; sourceTree = "<group>"; };
 		36A6A8E52AAA019C0085F27C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36A6A8E72AAA019E0085F27C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A6A8EA2AAA019E0085F27C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +50,12 @@
 		36A6A8FA2AAA019F0085F27C /* CatsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A6A8FE2AAA019F0085F27C /* CatsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppUITests.swift; sourceTree = "<group>"; };
 		36A6A9002AAA019F0085F27C /* CatsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3809E4D7389EF2DF531DAA4A /* Pods-CatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CatsAppTests/Pods-CatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61DC1DA54C1D850AA1C26073 /* Pods_CatsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91BB35BE8C645D1CAD167D23 /* Pods_CatsApp_CatsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatsApp_CatsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC3194F6B023C7FFE8A8B7F /* Pods-CatsApp-CatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsApp-CatsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-CatsApp-CatsAppUITests/Pods-CatsApp-CatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E06CA7C18702E3928E2FBB23 /* Pods-CatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsApp.debug.xcconfig"; path = "Target Support Files/Pods-CatsApp/Pods-CatsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EA7F29895D8A18E1BD8488A8 /* Pods_CatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA82B77548378A2EC8FD717E /* Pods_CatsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DC8F8D11EDBA96A0A61D97 /* Pods_CatsAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090815A3E8DD62CA7443652B /* Pods_CatsApp_CatsAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,8 @@
 				36A6A8F32AAA019F0085F27C /* CatsAppTests */,
 				36A6A8FD2AAA019F0085F27C /* CatsAppUITests */,
 				36A6A8E12AAA019C0085F27C /* Products */,
+				3B01CD0BBE0027793F26CDB2 /* Pods */,
+				765638901C6E16527FA5B903 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +111,10 @@
 		36A6A8E22AAA019C0085F27C /* CatsApp */ = {
 			isa = PBXGroup;
 			children = (
-				36A6A8E32AAA019C0085F27C /* CatsAppApp.swift */,
-				36A6A8E52AAA019C0085F27C /* ContentView.swift */,
+				36A6A8E32AAA019C0085F27C /* CatsApp.swift */,
+				36A6A90D2AAA022D0085F27C /* Models */,
+				36A6A90E2AAA02360085F27C /* Repositories */,
+				36A6A90F2AAA02460085F27C /* UI */,
 				36A6A8E72AAA019E0085F27C /* Assets.xcassets */,
 				36A6A8E92AAA019E0085F27C /* Preview Content */,
 			);
@@ -127,6 +146,68 @@
 			path = CatsAppUITests;
 			sourceTree = "<group>";
 		};
+		36A6A90D2AAA022D0085F27C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36A6A90E2AAA02360085F27C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				36A6A9112AAA02590085F27C /* Local */,
+				36A6A9102AAA02510085F27C /* Remote */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		36A6A90F2AAA02460085F27C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				36A6A8E52AAA019C0085F27C /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		36A6A9102AAA02510085F27C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		36A6A9112AAA02590085F27C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3B01CD0BBE0027793F26CDB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E06CA7C18702E3928E2FBB23 /* Pods-CatsApp.debug.xcconfig */,
+				1B41377E42F483C82FCD5CE2 /* Pods-CatsApp.release.xcconfig */,
+				3590394F82E02AD21AF1C8A0 /* Pods-CatsApp-CatsAppUITests.debug.xcconfig */,
+				ACC3194F6B023C7FFE8A8B7F /* Pods-CatsApp-CatsAppUITests.release.xcconfig */,
+				3809E4D7389EF2DF531DAA4A /* Pods-CatsAppTests.debug.xcconfig */,
+				021F8A02D06B7C19818544D5 /* Pods-CatsAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		765638901C6E16527FA5B903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F29895D8A18E1BD8488A8 /* Pods_CatsApp.framework */,
+				91BB35BE8C645D1CAD167D23 /* Pods_CatsApp_CatsAppUITests.framework */,
+				61DC1DA54C1D850AA1C26073 /* Pods_CatsAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A6A9042AAA019F0085F27C /* Build configuration list for PBXNativeTarget "CatsApp" */;
 			buildPhases = (
+				E24427461EAD70CE7266571B /* [CP] Check Pods Manifest.lock */,
 				36A6A8DC2AAA019C0085F27C /* Sources */,
 				36A6A8DD2AAA019C0085F27C /* Frameworks */,
 				36A6A8DE2AAA019C0085F27C /* Resources */,
@@ -151,6 +233,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A6A9072AAA019F0085F27C /* Build configuration list for PBXNativeTarget "CatsAppTests" */;
 			buildPhases = (
+				858BEB5E23DCB1850FD967FE /* [CP] Check Pods Manifest.lock */,
 				36A6A8EC2AAA019F0085F27C /* Sources */,
 				36A6A8ED2AAA019F0085F27C /* Frameworks */,
 				36A6A8EE2AAA019F0085F27C /* Resources */,
@@ -169,6 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36A6A90A2AAA019F0085F27C /* Build configuration list for PBXNativeTarget "CatsAppUITests" */;
 			buildPhases = (
+				45CA44C96C005B2C30DB7EF7 /* [CP] Check Pods Manifest.lock */,
 				36A6A8F62AAA019F0085F27C /* Sources */,
 				36A6A8F72AAA019F0085F27C /* Frameworks */,
 				36A6A8F82AAA019F0085F27C /* Resources */,
@@ -252,13 +336,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45CA44C96C005B2C30DB7EF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatsApp-CatsAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		858BEB5E23DCB1850FD967FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatsAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E24427461EAD70CE7266571B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		36A6A8DC2AAA019C0085F27C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */,
-				36A6A8E42AAA019C0085F27C /* CatsAppApp.swift in Sources */,
+				36A6A8E42AAA019C0085F27C /* CatsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +564,7 @@
 		};
 		36A6A9052AAA019F0085F27C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06CA7C18702E3928E2FBB23 /* Pods-CatsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -419,26 +573,32 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CatsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CatsApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cecile.cadoul.CatsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		36A6A9062AAA019F0085F27C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B41377E42F483C82FCD5CE2 /* Pods-CatsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,26 +607,32 @@
 				DEVELOPMENT_ASSET_PATHS = "\"CatsApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CatsApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cecile.cadoul.CatsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		36A6A9082AAA019F0085F27C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3809E4D7389EF2DF531DAA4A /* Pods-CatsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +652,7 @@
 		};
 		36A6A9092AAA019F0085F27C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 021F8A02D06B7C19818544D5 /* Pods-CatsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +672,7 @@
 		};
 		36A6A90B2AAA019F0085F27C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3590394F82E02AD21AF1C8A0 /* Pods-CatsApp-CatsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +690,7 @@
 		};
 		36A6A90C2AAA019F0085F27C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACC3194F6B023C7FFE8A8B7F /* Pods-CatsApp-CatsAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
