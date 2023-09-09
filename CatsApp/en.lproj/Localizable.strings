@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CatsApp
+
+  Created by Cecile on 09/09/2023.
+  
+*/
+
+"CATS_BREEDS_TITLE" = "Cats Breeds";
+"RETRY" = "Retry";
