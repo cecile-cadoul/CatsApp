@@ -29,7 +29,7 @@ final class BreedServiceTests: XCTestCase {
         var emptyDataError: Error?
 
         do {
-            try await service.fetchBreeds(limitOfBreed: 10, pageId: 0)
+            try await service.fetchBreeds(limitOfBreed: 10, pageId: 0, searchKey: "")
         } catch {
             emptyDataError = error
         }

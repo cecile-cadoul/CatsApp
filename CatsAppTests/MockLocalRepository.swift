@@ -9,6 +9,9 @@ import Foundation
 @testable import CatsApp
 
 final class MockLocalRepository: LocalRepository {
+    func filterBreeds(searchKey: String) {
+
+    }
 
     func saveData<T>(data: [T]) {
 
