@@ -12,9 +12,14 @@ final class BreedListViewModel: ObservableObject {
 
     @ObservedResults(
         Breed.self,
-        where: { $0.isFiltered == true },
         sortDescriptor: SortDescriptor(keyPath: "name")
     ) var breeds
+
+    @ObservedResults(
+        Breed.self,
+        where: { $0.isFiltered == true },
+        sortDescriptor: SortDescriptor(keyPath: "name")
+    ) var filteredBreeds
 
     @Published private var viewState: ViewState = .loading
     @Published var showError: Bool = false
@@ -74,7 +79,7 @@ final class BreedListViewModel: ObservableObject {
     }
 
     func hasReachedEnd(of breed: Breed) -> Bool {
-        return breeds.last?.id == breed.id
+        return filteredBreeds.last?.id == breed.id
     }
 
     // MARK: Private Methods
@@ -83,7 +88,7 @@ final class BreedListViewModel: ObservableObject {
         self.endOfDataReached = false
         self.pageId = 0
         if self.networkService.networkStatus == .satisfied {
-            self.breedService.deleteBreeds(breeds: Array(breeds))
+            self.breedService.deleteBreeds(breeds: Array(filteredBreeds))
         }
     }
 
@@ -115,7 +120,7 @@ final class BreedListViewModel: ObservableObject {
 
 }
 
-// MARK: - Extension
+// MARK: - ViewState Extension
 
 extension BreedListViewModel {
 
@@ -127,6 +132,8 @@ extension BreedListViewModel {
 
 }
 
+// MARK: - Filtering Extension
+
 extension BreedListViewModel {
 
     func filterBreeds() {
@@ -135,6 +142,11 @@ extension BreedListViewModel {
 
     func resetFilter() {
         self.searchKey.removeAll()
+        self.filterBreeds()
+    }
+
+    func filterBreeds(breedName: String) {
+        self.searchKey = breedName
         self.filterBreeds()
     }
 

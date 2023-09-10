@@ -10,7 +10,9 @@ import SwiftUI
 struct BreedsListView: View {
 
     @StateObject private var viewModel = BreedListViewModel()
-    @State private var hasAppeared = false
+    @State private var hasAppeared: Bool  = false
+    @State private var showSuggestion: Bool = false
+    @FocusState private var textFieldFocused: Bool
 
     var body: some View {
         ZStack {
@@ -19,6 +21,8 @@ struct BreedsListView: View {
             } else {
                 NavigationView {
                     VStack {
+
+                        // MARK: TextField
                         HStack(spacing: 10) {
                             Image(systemName: "magnifyingglass")
                                 .resizable()
@@ -26,9 +30,16 @@ struct BreedsListView: View {
                                 .frame(height: 16)
                                 .foregroundColor(.gray)
 
-                            TextField("SEARCH", text: $viewModel.searchKey) {
+                            TextField("SEARCH", text: $viewModel.searchKey, onEditingChanged: { _ in
+                                if textFieldFocused {
+                                    showSuggestion = false
+                                } else {
+                                    showSuggestion = true
+                                }
+                            }, onCommit: {
                                 viewModel.filterBreeds()
-                            }
+                            })
+                            .focused($textFieldFocused)
                             .autocorrectionDisabled(true)
                             .textInputAutocapitalization(.never)
                             .submitLabel(.search)
@@ -48,9 +59,36 @@ struct BreedsListView: View {
                         .cornerRadius(15)
                         .padding(.horizontal)
 
+                        // MARK: Suggestions
+                        if viewModel.searchKey.count > 1 && showSuggestion {
+                            ScrollView {
+                                ForEach(viewModel.breeds.where({
+                                    $0.name.contains(viewModel.searchKey,
+                                                     options: [.diacriticInsensitive,
+                                                               .caseInsensitive])
+                                }), id: \.self) { breed in
+                                    VStack(alignment: .leading) {
+                                        if let name = breed.name {
+                                            Button {
+                                                textFieldFocused = false
+                                                viewModel.filterBreeds(breedName: name)
+                                            } label: {
+                                                Text(name)
+                                            }
+
+                                            Divider()
+                                        }
+                                    }
+                                }
+                            }
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.horizontal)
+                        }
+
+                        // MARK: Breed List
                         ScrollView {
                             LazyVStack(spacing: 10) {
-                                ForEach(viewModel.breeds, id: \.id) { breed in
+                                ForEach(viewModel.filteredBreeds, id: \.id) { breed in
                                     NavigationLink {
                                         BreedDetailsView(breed: breed)
                                     } label: {
