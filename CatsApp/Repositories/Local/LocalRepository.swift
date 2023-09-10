@@ -15,4 +15,6 @@ protocol LocalRepository {
     func addImages(to breed: Breed, images: [BreedImage])
     func deleteImages(to breed: Breed)
 
+    func filterBreeds(searchKey: String)
+
 }

@@ -73,3 +73,31 @@ extension RealmLocalRepository {
     }
 
 }
+
+// MARK: - Filtering Extension
+
+extension RealmLocalRepository {
+
+    func filterBreeds(searchKey: String) {
+        do {
+            let realm = try Realm()
+            let breeds = realm.objects(Breed.self)
+
+            try realm.write {
+                breeds.forEach { breed in
+                    if searchKey.isEmpty {
+                        breed.isFiltered = true
+                    } else if let name = breed.name,
+                              (name.range(of: searchKey, options: [.caseInsensitive, .diacriticInsensitive]) != nil) {
+                        breed.isFiltered = true
+                    } else {
+                        breed.isFiltered = false
+                    }
+                }
+            }
+        } catch let error as NSError {
+            print("❌ RealmLocalRepository.filterBreeds: Failed to update breeds: \(error)")
+        }
+    }
+
+}

@@ -12,10 +12,13 @@ final class BreedListViewModel: ObservableObject {
 
     @ObservedResults(
         Breed.self,
+        where: { $0.isFiltered == true },
         sortDescriptor: SortDescriptor(keyPath: "name")
     ) var breeds
+
     @Published private var viewState: ViewState = .loading
     @Published var showError: Bool = false
+    @Published var searchKey: String = ""
 
     private(set) var error: NetworkError?
 
@@ -86,7 +89,9 @@ final class BreedListViewModel: ObservableObject {
 
     private func getBreeds() async {
         do {
-            try await self.breedService.fetchBreeds(limitOfBreed: limitOfBreedPerPage, pageId: pageId)
+            try await self.breedService.fetchBreeds(limitOfBreed: limitOfBreedPerPage,
+                                                    pageId: pageId,
+                                                    searchKey: searchKey)
         } catch {
             if let dataError = error as? DataError, dataError == .emptyData {
                 self.endOfDataReached = true
@@ -118,6 +123,19 @@ extension BreedListViewModel {
         case fetching
         case loading
         case finished
+    }
+
+}
+
+extension BreedListViewModel {
+
+    func filterBreeds() {
+        self.breedService.filterBreeds(searchKey: searchKey)
+    }
+
+    func resetFilter() {
+        self.searchKey.removeAll()
+        self.filterBreeds()
     }
 
 }
