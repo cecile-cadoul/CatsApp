@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class BreedRemoteRepository {
+final class BreedRemoteRepository: RemoteRepository {
 
     var httpClient: HttpClient
 
@@ -15,10 +15,7 @@ final class BreedRemoteRepository {
         self.httpClient = httpClient
     }
 
-    func getBreeds(limitOfBreed: Int, pageId: Int) async throws -> [Breed] {
-        let parameters = ["limit": limitOfBreed,
-                          "page": pageId]
-
+    func fetchData<T: Codable>(type: T.Type, parameters: [String: Any]) async throws -> T {
         return try await httpClient.fetchData(endPoint: API.allBreeds, parameters: parameters, httpCodes: .success)
     }
 

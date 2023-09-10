@@ -23,11 +23,13 @@ final class ImageRemoteRepositoryTests: XCTestCase {
     }
 
     func testFetchImagesWithSuccess() async throws {
-        let imagesResponse = try await self.remoteRepository.getImages(limitOfImage: 10,
-                                                                       pageId: 0,
-                                                                       breedIds: "beng",
-                                                                       includeBreeds: false,
-                                                                       imageSize: BreedImage.Size.med.rawValue)
+        let parameters: [String: Any] = ["limit": 10,
+                                         "page": 0,
+                                         "breed_ids": "beng",
+                                         "include_breeds": false,
+                                         "size": BreedImage.Size.med.rawValue,
+                                         "order": "DESC"]
+        let imagesResponse = try await self.remoteRepository.fetchData(type: [BreedImage].self, parameters: parameters)
 
         XCTAssertTrue(!imagesResponse.isEmpty)
     }
@@ -35,11 +37,14 @@ final class ImageRemoteRepositoryTests: XCTestCase {
     @MainActor
     func testDecodeImageWithSuccess() async throws {
         let mockImage = BreedImage.mockedData
-        let imagesResponse = try await self.remoteRepository.getImages(limitOfImage: 10,
-                                                                       pageId: 0,
-                                                                       breedIds: "beng",
-                                                                       includeBreeds: false,
-                                                                       imageSize: BreedImage.Size.med.rawValue)
+        let parameters: [String: Any] = ["limit": 10,
+                                         "page": 0,
+                                         "breed_ids": "beng",
+                                         "include_breeds": false,
+                                         "size": BreedImage.Size.med.rawValue,
+                                         "order": "DESC"]
+        let imagesResponse = try await self.remoteRepository.fetchData(type: [BreedImage].self, parameters: parameters)
+
         guard let image = imagesResponse.first else {
             XCTFail("❌ Failed to decode correctly")
             return

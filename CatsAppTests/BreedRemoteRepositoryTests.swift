@@ -23,7 +23,9 @@ final class BreedRemoteRepositoryTests: XCTestCase {
     }
 
     func testFetchBreedsWithSuccess() async throws {
-        let breedsResponse = try await self.remoteRepository.getBreeds(limitOfBreed: 3, pageId: 0)
+        let parameters = ["limit": 3,
+                           "page": 0]
+        let breedsResponse = try await self.remoteRepository.fetchData(type: [Breed].self, parameters: parameters)
 
         XCTAssertTrue(!breedsResponse.isEmpty)
     }
@@ -31,8 +33,9 @@ final class BreedRemoteRepositoryTests: XCTestCase {
     @MainActor
     func testDecodeBreedWithSuccess() async throws {
         let mockBreed = Breed.mockedData
-        let breedsResponse = try await self.remoteRepository.getBreeds(limitOfBreed: 3, pageId: 0)
-
+        let parameters = ["limit": 3,
+                           "page": 0]
+        let breedsResponse = try await self.remoteRepository.fetchData(type: [Breed].self, parameters: parameters)
         guard let dataBreed = breedsResponse.first else {
             XCTFail("❌ Failed to decode correctly")
             return

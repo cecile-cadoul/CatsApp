@@ -10,10 +10,10 @@ import RealmSwift
 
 final class ImageService {
 
-    private var remoteRepository: ImageRemoteRepository
+    private var remoteRepository: RemoteRepository
     private var localRepository: LocalRepository
 
-    init(remoteRepository: ImageRemoteRepository, localRepository: LocalRepository) {
+    init(remoteRepository: RemoteRepository, localRepository: LocalRepository) {
         self.remoteRepository = remoteRepository
         self.localRepository = localRepository
     }
@@ -21,11 +21,13 @@ final class ImageService {
     @MainActor
     func fetchBreedImages(breed: Breed, limitOfImage: Int, pageId: Int,
                           includeBreeds: Bool, imageSize: String) async throws {
-        let images = try await self.remoteRepository.getImages(limitOfImage: limitOfImage,
-                                                               pageId: pageId,
-                                                               breedIds: breed.id,
-                                                               includeBreeds: includeBreeds,
-                                                               imageSize: imageSize)
+        let parameters: [String: Any] = ["limit": limitOfImage,
+                                         "page": pageId,
+                                         "breed_ids": breed.id,
+                                         "include_breeds": includeBreeds,
+                                         "size": imageSize,
+                                         "order": "DESC"]
+        let images = try await self.remoteRepository.fetchData(type: [BreedImage].self, parameters: parameters)
 
         if images.isEmpty {
             throw DataError.emptyData

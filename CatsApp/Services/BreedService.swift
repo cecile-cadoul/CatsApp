@@ -9,17 +9,19 @@ import Foundation
 
 final class BreedService {
 
-    private var remoteRepository: BreedRemoteRepository
+    private var remoteRepository: RemoteRepository
     private var localRepository: LocalRepository
 
-    init(remoteRepository: BreedRemoteRepository, localRepository: LocalRepository) {
+    init(remoteRepository: RemoteRepository, localRepository: LocalRepository) {
         self.remoteRepository = remoteRepository
         self.localRepository = localRepository
     }
 
     @MainActor
     func fetchBreeds(limitOfBreed: Int, pageId: Int, searchKey: String) async throws {
-        let breeds = try await self.remoteRepository.getBreeds(limitOfBreed: limitOfBreed, pageId: pageId)
+        let parameters = ["limit": limitOfBreed,
+                          "page": pageId]
+        let breeds = try await self.remoteRepository.fetchData(type: [Breed].self, parameters: parameters)
 
         if breeds.isEmpty {
             throw DataError.emptyData

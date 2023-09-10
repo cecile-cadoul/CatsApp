@@ -35,6 +35,7 @@
 		3692826D2AADB2A500F17979 /* BreedImagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692826C2AADB2A500F17979 /* BreedImagesListView.swift */; };
 		369282732AADEBE500F17979 /* ImageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369282722AADEBE500F17979 /* ImageRemoteRepository.swift */; };
 		369282762AAE12DC00F17979 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 369282752AAE12DC00F17979 /* NukeUI */; };
+		369282782AAE424A00F17979 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369282772AAE424A00F17979 /* RemoteRepository.swift */; };
 		36A6A8E42AAA019C0085F27C /* CatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E32AAA019C0085F27C /* CatsApp.swift */; };
 		36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E52AAA019C0085F27C /* ContentView.swift */; };
 		36A6A8E82AAA019E0085F27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6A8E72AAA019E0085F27C /* Assets.xcassets */; };
@@ -98,6 +99,7 @@
 		3692826A2AADAEE600F17979 /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
 		3692826C2AADB2A500F17979 /* BreedImagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesListView.swift; sourceTree = "<group>"; };
 		369282722AADEBE500F17979 /* ImageRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteRepository.swift; sourceTree = "<group>"; };
+		369282772AAE424A00F17979 /* RemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
 		36A6A8E02AAA019C0085F27C /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A6A8E32AAA019C0085F27C /* CatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsApp.swift; sourceTree = "<group>"; };
 		36A6A8E52AAA019C0085F27C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		36A6A9102AAA02510085F27C /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				369282772AAE424A00F17979 /* RemoteRepository.swift */,
 				36A6A9192AAA29C40085F27C /* BreedRemoteRepository.swift */,
 				369282722AADEBE500F17979 /* ImageRemoteRepository.swift */,
 			);
@@ -620,6 +623,7 @@
 				3692826D2AADB2A500F17979 /* BreedImagesListView.swift in Sources */,
 				36A6A91D2AAA2AB50085F27C /* APICall.swift in Sources */,
 				3692825B2AAD991700F17979 /* ImageService.swift in Sources */,
+				369282782AAE424A00F17979 /* RemoteRepository.swift in Sources */,
 				36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */,
 				369282732AADEBE500F17979 /* ImageRemoteRepository.swift in Sources */,
 				365C83132AAC522300AB155E /* DataError.swift in Sources */,

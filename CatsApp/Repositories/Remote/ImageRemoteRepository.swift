@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ImageRemoteRepository {
+final class ImageRemoteRepository: RemoteRepository {
 
     var httpClient: HttpClient
 
@@ -15,15 +15,7 @@ final class ImageRemoteRepository {
         self.httpClient = httpClient
     }
 
-    func getImages(limitOfImage: Int, pageId: Int, breedIds: String,
-                   includeBreeds: Bool, imageSize: String) async throws -> [BreedImage] {
-        let parameters: [String: Any] = ["limit": limitOfImage,
-                          "page": pageId,
-                          "breed_ids": breedIds,
-                          "include_breeds": includeBreeds,
-                          "size": imageSize,
-                          "order": "DESC"]
-
+    func fetchData<T: Codable>(type: T.Type, parameters: [String: Any]) async throws -> T {
         return try await httpClient.fetchData(endPoint: API.allImages, parameters: parameters, httpCodes: .success)
     }
 
