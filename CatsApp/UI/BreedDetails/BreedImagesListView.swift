@@ -39,7 +39,7 @@ struct BreedImagesListView: View {
                                     Image(systemName: "multiply.circle.fill")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
-                                        .frame(height:14)
+                                        .frame(height: 14)
                                         .foregroundColor(.red)
                                 } else {
                                     ProgressView()
