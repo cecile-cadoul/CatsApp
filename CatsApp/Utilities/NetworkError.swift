@@ -21,8 +21,8 @@ extension NetworkError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case let .custom(error):
-            return "\(error)"
+        case .custom:
+            return "An error occured"
         case .decoderError:
             return "Cannot decode from Data"
         case let .httpCode(code):

@@ -49,6 +49,10 @@ final class BreedListViewModel: ObservableObject {
 
     @MainActor
     func fetchNextBreeds() async {
+        guard self.networkService.networkStatus == .satisfied else {
+            print("❌ BreedListViewModel.fetchNextBreeds: no connection")
+            return
+        }
         guard self.endOfDataReached == false, !self.isFetching else {
             return
         }
@@ -62,6 +66,11 @@ final class BreedListViewModel: ObservableObject {
 
     @MainActor
     func fetchBreeds() async {
+        guard self.networkService.networkStatus == .satisfied else {
+            print("❌ BreedListViewModel.fetchBreeds: no connection")
+            self.viewState = .finished
+            return
+        }
         await self.resetData()
         self.viewState = .loading
 
@@ -79,9 +88,7 @@ final class BreedListViewModel: ObservableObject {
     private func resetData() async {
         self.endOfDataReached = false
         self.pageId = 0
-        if self.networkService.networkStatus == .satisfied {
-            self.breedService.deleteBreeds(breeds: Array(breeds))
-        }
+        self.breedService.deleteBreeds(breeds: Array(breeds))
     }
 
     private func getBreeds() async {

@@ -12,10 +12,10 @@ final class NetworkService {
 
     static let shared = NetworkService()
 
+    private var monitor = NWPathMonitor()
     private(set) var networkStatus: NWPath.Status?
 
     private init() {
-        let monitor = NWPathMonitor()
         let queue = DispatchQueue(label: "Monitor")
 
         monitor.pathUpdateHandler = { path in
