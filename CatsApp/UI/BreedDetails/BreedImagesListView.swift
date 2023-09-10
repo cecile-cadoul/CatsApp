@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NukeUI
 
 struct BreedImagesListView: View {
 
@@ -27,16 +28,24 @@ struct BreedImagesListView: View {
                 LazyVGrid(columns: gridColumns, spacing: 2) {
                     ForEach(viewModel.breed.images, id: \.id) { image in
                         if let url = URL(string: image.url ?? "") {
-                            AsyncImage(url: url, content: { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 120, height: 120)
-                                    .clipped()
-                            }, placeholder: {
-                                ProgressView()
-                                    .frame(width: 120, height: 120)
-                            })
+                            LazyImage(url: url) { state in
+                                if let image = state.image {
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 120, height: 120)
+                                        .clipped()
+                                } else if state.error != nil {
+                                    Image(systemName: "multiply.circle.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height:14)
+                                        .foregroundColor(.red)
+                                } else {
+                                    ProgressView()
+                                        .frame(width: 120, height: 120)
+                                }
+                            }
                             .background(Color.gray)
                             .frame(width: 120, height: 120)
                             .onAppear {

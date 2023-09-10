@@ -34,6 +34,7 @@
 		3692826B2AADAEE600F17979 /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692826A2AADAEE600F17979 /* BreedDetailsViewModel.swift */; };
 		3692826D2AADB2A500F17979 /* BreedImagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692826C2AADB2A500F17979 /* BreedImagesListView.swift */; };
 		369282732AADEBE500F17979 /* ImageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369282722AADEBE500F17979 /* ImageRemoteRepository.swift */; };
+		369282762AAE12DC00F17979 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 369282752AAE12DC00F17979 /* NukeUI */; };
 		36A6A8E42AAA019C0085F27C /* CatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E32AAA019C0085F27C /* CatsApp.swift */; };
 		36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E52AAA019C0085F27C /* ContentView.swift */; };
 		36A6A8E82AAA019E0085F27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6A8E72AAA019E0085F27C /* Assets.xcassets */; };
@@ -127,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA82B77548378A2EC8FD717E /* Pods_CatsApp.framework in Frameworks */,
+				369282762AAE12DC00F17979 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +363,9 @@
 			dependencies = (
 			);
 			name = CatsApp;
+			packageProductDependencies = (
+				369282752AAE12DC00F17979 /* NukeUI */,
+			);
 			productName = CatsApp;
 			productReference = 36A6A8E02AAA019C0085F27C /* CatsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -436,6 +441,9 @@
 				Base,
 			);
 			mainGroup = 36A6A8D72AAA019C0085F27C;
+			packageReferences = (
+				369282742AAE12DC00F17979 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 36A6A8E12AAA019C0085F27C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -805,6 +813,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatsApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatsApp/Info.plist;
@@ -842,6 +851,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CatsApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CatsApp/Info.plist;
@@ -984,6 +994,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		369282742AAE12DC00F17979 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		369282752AAE12DC00F17979 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 369282742AAE12DC00F17979 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36A6A8D82AAA019C0085F27C /* Project object */;
 }
