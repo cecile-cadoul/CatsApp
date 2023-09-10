@@ -14,8 +14,16 @@ final class BreedListViewModel: ObservableObject {
         Breed.self,
         sortDescriptor: SortDescriptor(keyPath: "name")
     ) var breeds
+
+    @ObservedResults(
+        Breed.self,
+        where: { $0.isFiltered == true },
+        sortDescriptor: SortDescriptor(keyPath: "name")
+    ) var filteredBreeds
+
     @Published private var viewState: ViewState = .loading
     @Published var showError: Bool = false
+    @Published var searchKey: String = ""
 
     private(set) var error: NetworkError?
 
@@ -80,7 +88,7 @@ final class BreedListViewModel: ObservableObject {
     }
 
     func hasReachedEnd(of breed: Breed) -> Bool {
-        return breeds.last?.id == breed.id
+        return filteredBreeds.last?.id == breed.id
     }
 
     // MARK: Private Methods
@@ -93,7 +101,9 @@ final class BreedListViewModel: ObservableObject {
 
     private func getBreeds() async {
         do {
-            try await self.breedService.fetchBreeds(limitOfBreed: limitOfBreedPerPage, pageId: pageId)
+            try await self.breedService.fetchBreeds(limitOfBreed: limitOfBreedPerPage,
+                                                    pageId: pageId,
+                                                    searchKey: searchKey)
         } catch {
             if let dataError = error as? DataError, dataError == .emptyData {
                 self.endOfDataReached = true
@@ -117,7 +127,7 @@ final class BreedListViewModel: ObservableObject {
 
 }
 
-// MARK: - Extension
+// MARK: - ViewState Extension
 
 extension BreedListViewModel {
 
@@ -125,6 +135,26 @@ extension BreedListViewModel {
         case fetching
         case loading
         case finished
+    }
+
+}
+
+// MARK: - Filtering Extension
+
+extension BreedListViewModel {
+
+    func filterBreeds() {
+        self.breedService.filterBreeds(searchKey: searchKey)
+    }
+
+    func resetFilter() {
+        self.searchKey.removeAll()
+        self.filterBreeds()
+    }
+
+    func filterBreeds(breedName: String) {
+        self.searchKey = breedName
+        self.filterBreeds()
     }
 
 }

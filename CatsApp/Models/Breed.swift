@@ -52,6 +52,7 @@ final class Breed: Object, Codable, Identifiable {
     @Persisted var hypoallergenic: Int?
     @Persisted var referenceImageId: String?
     @Persisted var images: List<BreedImage> = List()
+    @Persisted var isFiltered: Bool = true
 
     enum CodingKeys: String, CodingKey {
         case id

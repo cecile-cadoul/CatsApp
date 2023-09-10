@@ -18,18 +18,33 @@ final class BreedService {
     }
 
     @MainActor
-    func fetchBreeds(limitOfBreed: Int, pageId: Int) async throws {
+    func fetchBreeds(limitOfBreed: Int, pageId: Int, searchKey: String) async throws {
         let breeds = try await self.remoteRepository.getBreeds(limitOfBreed: limitOfBreed, pageId: pageId)
 
         if breeds.isEmpty {
             throw DataError.emptyData
         }
-        self.localRepository.saveData(data: breeds)
+        if !searchKey.isEmpty {
+            self.filterBreeds(searchKey: searchKey) // We use the search key to init the filtration state
+        } else {
+            self.localRepository.saveData(data: breeds)
+        }
     }
 
     @MainActor
     func deleteBreeds(breeds: [Breed]) {
         self.localRepository.deleteData(data: breeds)
+    }
+
+}
+
+// MARK: - Filtration Extension
+
+extension BreedService {
+
+    @MainActor
+    func filterBreeds(searchKey: String) {
+        self.localRepository.filterBreeds(searchKey: searchKey)
     }
 
 }
