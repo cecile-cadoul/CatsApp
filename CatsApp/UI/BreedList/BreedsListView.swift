@@ -23,12 +23,14 @@ struct BreedsListView: View {
                         LazyVStack(spacing: 10) {
                             ForEach(viewModel.breeds, id: \.id) { breed in
                                 NavigationLink {
-
+                                    BreedDetailsView(breed: breed)
                                 } label: {
                                     BreedItemView(breed: breed)
-                                        .task {
+                                        .onAppear {
                                             if viewModel.hasReachedEnd(of: breed) {
-                                                await viewModel.fetchNextBreeds()
+                                                Task {
+                                                    await viewModel.fetchNextBreeds()
+                                                }
                                             }
                                         }
                                 }
@@ -39,6 +41,7 @@ struct BreedsListView: View {
                     .navigationBarTitleDisplayMode(.automatic)
                     .navigationTitle("CATS_BREEDS_TITLE")
                 }
+                .accentColor(.black)
             }
         }
         .task {

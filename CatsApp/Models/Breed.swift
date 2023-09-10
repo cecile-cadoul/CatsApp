@@ -51,7 +51,7 @@ final class Breed: Object, Codable, Identifiable {
     @Persisted var wikipediaUrl: String?
     @Persisted var hypoallergenic: Int?
     @Persisted var referenceImageId: String?
-    @Persisted var image: BreedImage?
+    @Persisted var images: List<BreedImage> = List()
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -109,7 +109,7 @@ final class Breed: Object, Codable, Identifiable {
          vocalisation: Int? = nil, experimental: Int? = nil, hairless: Int? = nil, natural: Int? = nil,
          rare: Int? = nil, rex: Int? = nil, suppressedTail: Int? = nil, shortLegs: Int? = nil,
          wikipediaUrl: String? = nil, hypoallergenic: Int? = nil, referenceImageId: String? = nil,
-         image: BreedImage? = nil) {
+         images: List<BreedImage> = List()) {
         super.init()
 
         self.id = id
@@ -150,7 +150,7 @@ final class Breed: Object, Codable, Identifiable {
         self.wikipediaUrl = wikipediaUrl
         self.hypoallergenic = hypoallergenic
         self.referenceImageId = referenceImageId
-        self.image = image
+        self.images = images
     }
 
 }
@@ -203,23 +203,35 @@ final class BreedImage: EmbeddedObject, Codable {
 
 extension Breed {
 
-    static let mockedData: [Breed] = [
-        Breed(id: "beng", name: "Bengal", weight: BreedWeight(imperial: "6 - 12", metric: "3 - 7"),
-              cfaUrl: "http://cfa.org/Breeds/BreedsAB/Bengal.aspx",
-              vetstreetUrl: "http://www.vetstreet.com/cats/bengal",
-              vcahospitalsUrl: "https://vcahospitals.com/know-your-pet/cat-breeds/bengal",
-              temperament: "Alert, Agile, Energetic, Demanding, Intelligent", origin: "United States",
-              countryCodes: "US", countryCode: "US",
-              breedDescription: "Bengals are a lot of fun to live with.",
-              lifeSpan: "12 - 15", indoor: 0, lap: 0, altNames: nil, adaptability: 5, affectionLevel: 5,
-              childFriendly: 4, catFriendly: 4, dogFriendly: 5,
-              energyLevel: 5, grooming: 1, healthIssues: 3, intelligence: 5, sheddingLevel: 3, socialNeeds: 5,
-              strangerFriendly: 3, vocalisation: 5,
-              experimental: 0, hairless: 0, natural: 0, rare: 0, rex: 0, suppressedTail: 0, shortLegs: 0,
-              wikipediaUrl: "https://en.wikipedia.org/wiki/Bengal_(cat)", hypoallergenic: 1,
-              referenceImageId: "O3btzLlsO",
-              image: BreedImage(id: "O3btzLlsO", width: 1100, height: 739,
-                                url: "https://cdn2.thecatapi.com/images/O3btzLlsO.png"))
-    ]
+    static let mockedData: Breed = Breed(id: "beng", name: "Bengal",
+                                         weight: BreedWeight(imperial: "6 - 12", metric: "3 - 7"),
+                                         cfaUrl: "http://cfa.org/Breeds/BreedsAB/Bengal.aspx",
+                                         vetstreetUrl: "http://www.vetstreet.com/cats/bengal",
+                                         vcahospitalsUrl: "https://vcahospitals.com/know-your-pet/cat-breeds/bengal",
+                                         temperament: "Alert, Agile, Energetic, Demanding, Intelligent",
+                                         origin: "United States", countryCodes: "US", countryCode: "US",
+                                         breedDescription: "Bengals are a lot of fun to live with.",
+                                         lifeSpan: "12 - 15", indoor: 0, lap: 0, altNames: nil, adaptability: 5,
+                                         affectionLevel: 5, childFriendly: 4, catFriendly: 4, dogFriendly: 5,
+                                         energyLevel: 5, grooming: 1, healthIssues: 3, intelligence: 5,
+                                         sheddingLevel: 3, socialNeeds: 5, strangerFriendly: 3, vocalisation: 5,
+                                         experimental: 0, hairless: 0, natural: 0, rare: 0, rex: 0, suppressedTail: 0,
+                                         shortLegs: 0, wikipediaUrl: "https://en.wikipedia.org/wiki/Bengal_(cat)",
+                                         hypoallergenic: 1, referenceImageId: "O3btzLlsO")
+
+}
+
+// MARK: - Breed Image Extension
+
+extension BreedImage {
+
+    static let mockedData: BreedImage = BreedImage(id: "itfFA4NWS", width: 1280, height: 914,
+                                    url: "https://cdn2.thecatapi.com/images/itfFA4NWS.jpg")
+
+    enum Size: String {
+        case small
+        case med
+        case full
+    }
 
 }

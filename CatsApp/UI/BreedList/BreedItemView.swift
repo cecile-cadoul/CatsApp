@@ -58,6 +58,6 @@ struct BreedItemView: View {
 
 struct BreedItemViea_Previews: PreviewProvider {
     static var previews: some View {
-        BreedItemView(breed: Breed.mockedData.first!)
+        BreedItemView(breed: Breed.mockedData)
     }
 }

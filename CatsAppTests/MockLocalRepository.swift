@@ -9,6 +9,7 @@ import Foundation
 @testable import CatsApp
 
 final class MockLocalRepository: LocalRepository {
+
     func saveData<T>(data: [T]) {
 
     }
@@ -16,4 +17,13 @@ final class MockLocalRepository: LocalRepository {
     func deleteData<T>(data: [T]) {
 
     }
+
+    func addImages(to breed: Breed, images: [BreedImage]) {
+
+    }
+
+    func deleteImages(to breed: Breed) {
+
+    }
+
 }

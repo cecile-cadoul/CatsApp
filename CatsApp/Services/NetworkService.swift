@@ -21,9 +21,9 @@ final class NetworkService {
         monitor.pathUpdateHandler = { path in
             self.networkStatus = path.status
             if path.status == .satisfied {
-                print("Network Service: connected")
+                print("NetworkService: connected")
             } else {
-                print("❌ Network Service: no connection")
+                print("❌ NetworkService: no connection")
             }
         }
         monitor.start(queue: queue)

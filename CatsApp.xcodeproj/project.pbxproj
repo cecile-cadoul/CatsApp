@@ -25,8 +25,15 @@
 		365C83172AAC686B00AB155E /* BreedServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C83162AAC686B00AB155E /* BreedServiceTests.swift */; };
 		365C83192AAC68FD00AB155E /* MockLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365C83182AAC68FD00AB155E /* MockLocalRepository.swift */; };
 		366DD8E42AAB8C74002FC206 /* BreedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DD8E32AAB8C74002FC206 /* BreedItemView.swift */; };
-		366DD8E62AAB9408002FC206 /* ImagesRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DD8E52AAB9408002FC206 /* ImagesRemoteRepository.swift */; };
 		366DD8E82AAB98D9002FC206 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366DD8E72AAB98D9002FC206 /* NetworkService.swift */; };
+		3692825B2AAD991700F17979 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692825A2AAD991700F17979 /* ImageService.swift */; };
+		3692825D2AAD9A6800F17979 /* ImagesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3692825C2AAD9A6800F17979 /* ImagesResponse.json */; };
+		3692825F2AAD9A9D00F17979 /* ImageRemoteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692825E2AAD9A9D00F17979 /* ImageRemoteRepositoryTests.swift */; };
+		369282672AADAC4600F17979 /* ImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369282662AADAC4600F17979 /* ImageServiceTests.swift */; };
+		369282692AADAEC400F17979 /* BreedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369282682AADAEC400F17979 /* BreedDetailsView.swift */; };
+		3692826B2AADAEE600F17979 /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692826A2AADAEE600F17979 /* BreedDetailsViewModel.swift */; };
+		3692826D2AADB2A500F17979 /* BreedImagesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3692826C2AADB2A500F17979 /* BreedImagesListView.swift */; };
+		369282732AADEBE500F17979 /* ImageRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369282722AADEBE500F17979 /* ImageRemoteRepository.swift */; };
 		36A6A8E42AAA019C0085F27C /* CatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E32AAA019C0085F27C /* CatsApp.swift */; };
 		36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A8E52AAA019C0085F27C /* ContentView.swift */; };
 		36A6A8E82AAA019E0085F27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6A8E72AAA019E0085F27C /* Assets.xcassets */; };
@@ -37,7 +44,7 @@
 		36A6A9162AAA0CC50085F27C /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A9152AAA0CC50085F27C /* Breed.swift */; };
 		36A6A91A2AAA29C40085F27C /* BreedRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A9192AAA29C40085F27C /* BreedRemoteRepository.swift */; };
 		36A6A91D2AAA2AB50085F27C /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A91C2AAA2AB50085F27C /* APICall.swift */; };
-		36A6A91F2AAA31920085F27C /* BreedLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A91E2AAA31920085F27C /* BreedLocalRepository.swift */; };
+		36A6A91F2AAA31920085F27C /* RealmLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A91E2AAA31920085F27C /* RealmLocalRepository.swift */; };
 		36A6A9222AAA3A250085F27C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6A9212AAA3A250085F27C /* Constants.swift */; };
 		48DC8F8D11EDBA96A0A61D97 /* Pods_CatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61DC1DA54C1D850AA1C26073 /* Pods_CatsAppTests.framework */; };
 		BA82B77548378A2EC8FD717E /* Pods_CatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F29895D8A18E1BD8488A8 /* Pods_CatsApp.framework */; };
@@ -81,8 +88,15 @@
 		365C83162AAC686B00AB155E /* BreedServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedServiceTests.swift; sourceTree = "<group>"; };
 		365C83182AAC68FD00AB155E /* MockLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalRepository.swift; sourceTree = "<group>"; };
 		366DD8E32AAB8C74002FC206 /* BreedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedItemView.swift; sourceTree = "<group>"; };
-		366DD8E52AAB9408002FC206 /* ImagesRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRemoteRepository.swift; sourceTree = "<group>"; };
 		366DD8E72AAB98D9002FC206 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3692825A2AAD991700F17979 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		3692825C2AAD9A6800F17979 /* ImagesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ImagesResponse.json; sourceTree = "<group>"; };
+		3692825E2AAD9A9D00F17979 /* ImageRemoteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteRepositoryTests.swift; sourceTree = "<group>"; };
+		369282662AADAC4600F17979 /* ImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceTests.swift; sourceTree = "<group>"; };
+		369282682AADAEC400F17979 /* BreedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsView.swift; sourceTree = "<group>"; };
+		3692826A2AADAEE600F17979 /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
+		3692826C2AADB2A500F17979 /* BreedImagesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesListView.swift; sourceTree = "<group>"; };
+		369282722AADEBE500F17979 /* ImageRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRemoteRepository.swift; sourceTree = "<group>"; };
 		36A6A8E02AAA019C0085F27C /* CatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A6A8E32AAA019C0085F27C /* CatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsApp.swift; sourceTree = "<group>"; };
 		36A6A8E52AAA019C0085F27C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,7 +110,7 @@
 		36A6A9152AAA0CC50085F27C /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		36A6A9192AAA29C40085F27C /* BreedRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRemoteRepository.swift; sourceTree = "<group>"; };
 		36A6A91C2AAA2AB50085F27C /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
-		36A6A91E2AAA31920085F27C /* BreedLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedLocalRepository.swift; sourceTree = "<group>"; };
+		36A6A91E2AAA31920085F27C /* RealmLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLocalRepository.swift; sourceTree = "<group>"; };
 		36A6A9202AAA37A80085F27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		36A6A9212AAA3A250085F27C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3809E4D7389EF2DF531DAA4A /* Pods-CatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-CatsAppTests/Pods-CatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +152,7 @@
 		363201B52AAB1D21009F6398 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3692826A2AADAEE600F17979 /* BreedDetailsViewModel.swift */,
 				363201B62AAB2FF2009F6398 /* BreedListViewModel.swift */,
 			);
 			path = ViewModels;
@@ -147,9 +162,28 @@
 			isa = PBXGroup;
 			children = (
 				363201BF2AAB3FF9009F6398 /* BreedService.swift */,
+				3692825A2AAD991700F17979 /* ImageService.swift */,
 				366DD8E72AAB98D9002FC206 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3692826E2AADB35000F17979 /* BreedDetails */ = {
+			isa = PBXGroup;
+			children = (
+				369282682AADAEC400F17979 /* BreedDetailsView.swift */,
+				3692826C2AADB2A500F17979 /* BreedImagesListView.swift */,
+			);
+			path = BreedDetails;
+			sourceTree = "<group>";
+		};
+		3692826F2AADB36E00F17979 /* BreedList */ = {
+			isa = PBXGroup;
+			children = (
+				366DD8E32AAB8C74002FC206 /* BreedItemView.swift */,
+				363201C22AAB49F1009F6398 /* BreedsListView.swift */,
+			);
+			path = BreedList;
 			sourceTree = "<group>";
 		};
 		36A6A8D72AAA019C0085F27C = {
@@ -204,10 +238,13 @@
 			isa = PBXGroup;
 			children = (
 				36A6A8F42AAA019F0085F27C /* BreedRemoteRepositoryTests.swift */,
-				363201B92AAB3448009F6398 /* BreedLocalRepositoryTests.swift */,
 				365C83162AAC686B00AB155E /* BreedServiceTests.swift */,
+				3692825E2AAD9A9D00F17979 /* ImageRemoteRepositoryTests.swift */,
+				369282662AADAC4600F17979 /* ImageServiceTests.swift */,
+				363201B92AAB3448009F6398 /* BreedLocalRepositoryTests.swift */,
 				363201AB2AAB0442009F6398 /* Mockable.swift */,
 				363201A92AAB034B009F6398 /* BreedsResponse.json */,
+				3692825C2AAD9A6800F17979 /* ImagesResponse.json */,
 				365C83142AAC61A800AB155E /* EmptyResponse.json */,
 				363201AD2AAB067E009F6398 /* MockHttpClient.swift */,
 				365C83182AAC68FD00AB155E /* MockLocalRepository.swift */,
@@ -244,9 +281,9 @@
 		36A6A90F2AAA02460085F27C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3692826F2AADB36E00F17979 /* BreedList */,
+				3692826E2AADB35000F17979 /* BreedDetails */,
 				36A6A8E52AAA019C0085F27C /* ContentView.swift */,
-				363201C22AAB49F1009F6398 /* BreedsListView.swift */,
-				366DD8E32AAB8C74002FC206 /* BreedItemView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -255,7 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				36A6A9192AAA29C40085F27C /* BreedRemoteRepository.swift */,
-				366DD8E52AAB9408002FC206 /* ImagesRemoteRepository.swift */,
+				369282722AADEBE500F17979 /* ImageRemoteRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -264,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				363201BB2AAB3FB6009F6398 /* LocalRepository.swift */,
-				36A6A91E2AAA31920085F27C /* BreedLocalRepository.swift */,
+				36A6A91E2AAA31920085F27C /* RealmLocalRepository.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -426,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				363201AA2AAB034B009F6398 /* BreedsResponse.json in Resources */,
+				3692825D2AAD9A6800F17979 /* ImagesResponse.json in Resources */,
 				365C83152AAC61A800AB155E /* EmptyResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,21 +604,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A6A91F2AAA31920085F27C /* BreedLocalRepository.swift in Sources */,
+				369282692AADAEC400F17979 /* BreedDetailsView.swift in Sources */,
+				36A6A91F2AAA31920085F27C /* RealmLocalRepository.swift in Sources */,
 				36A6A9162AAA0CC50085F27C /* Breed.swift in Sources */,
 				363201C32AAB49F1009F6398 /* BreedsListView.swift in Sources */,
 				363201BC2AAB3FB6009F6398 /* LocalRepository.swift in Sources */,
+				3692826D2AADB2A500F17979 /* BreedImagesListView.swift in Sources */,
 				36A6A91D2AAA2AB50085F27C /* APICall.swift in Sources */,
+				3692825B2AAD991700F17979 /* ImageService.swift in Sources */,
 				36A6A8E62AAA019C0085F27C /* ContentView.swift in Sources */,
+				369282732AADEBE500F17979 /* ImageRemoteRepository.swift in Sources */,
 				365C83132AAC522300AB155E /* DataError.swift in Sources */,
 				363201B12AAB06E4009F6398 /* HttpClient.swift in Sources */,
 				36A6A8E42AAA019C0085F27C /* CatsApp.swift in Sources */,
-				366DD8E62AAB9408002FC206 /* ImagesRemoteRepository.swift in Sources */,
 				363201A82AAAFED5009F6398 /* NetworkError.swift in Sources */,
 				366DD8E82AAB98D9002FC206 /* NetworkService.swift in Sources */,
 				363201C02AAB3FF9009F6398 /* BreedService.swift in Sources */,
 				366DD8E42AAB8C74002FC206 /* BreedItemView.swift in Sources */,
 				36A6A91A2AAA29C40085F27C /* BreedRemoteRepository.swift in Sources */,
+				3692826B2AADAEE600F17979 /* BreedDetailsViewModel.swift in Sources */,
 				36A6A9222AAA3A250085F27C /* Constants.swift in Sources */,
 				365C83112AAC520600AB155E /* HttpCodes.swift in Sources */,
 				363201B72AAB2FF2009F6398 /* BreedListViewModel.swift in Sources */,
@@ -592,9 +634,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				363201B42AAB187E009F6398 /* MockHttpClient.swift in Sources */,
+				369282672AADAC4600F17979 /* ImageServiceTests.swift in Sources */,
 				365C83192AAC68FD00AB155E /* MockLocalRepository.swift in Sources */,
 				363201BA2AAB3448009F6398 /* BreedLocalRepositoryTests.swift in Sources */,
 				365C83172AAC686B00AB155E /* BreedServiceTests.swift in Sources */,
+				3692825F2AAD9A9D00F17979 /* ImageRemoteRepositoryTests.swift in Sources */,
 				36A6A8F52AAA019F0085F27C /* BreedRemoteRepositoryTests.swift in Sources */,
 				363201AC2AAB0442009F6398 /* Mockable.swift in Sources */,
 			);

@@ -12,4 +12,7 @@ protocol LocalRepository {
     func saveData<T>(data: [T])
     func deleteData<T>(data: [T])
 
+    func addImages(to breed: Breed, images: [BreedImage])
+    func deleteImages(to breed: Breed)
+
 }

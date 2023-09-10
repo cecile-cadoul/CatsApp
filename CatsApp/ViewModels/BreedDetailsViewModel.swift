@@ -1,27 +1,25 @@
 //
-//  BreedListViewModel.swift
+//  BreedDetailsViewModel.swift
 //  CatsApp
 //
-//  Created by Cecile on 08/09/2023.
+//  Created by Cecile on 10/09/2023.
 //
 
 import Foundation
 import RealmSwift
 
-final class BreedListViewModel: ObservableObject {
+class BreedDetailsViewModel: ObservableObject {
 
-    @ObservedResults(
-        Breed.self,
-        sortDescriptor: SortDescriptor(keyPath: "name")
-    ) var breeds
+    var breed: Breed
+
     @Published private var viewState: ViewState = .loading
     @Published var showError: Bool = false
 
     private(set) var error: NetworkError?
 
-    private var breedService: BreedService
+    private var imageService: ImageService
     private var networkService: NetworkService
-    private let limitOfBreedPerPage: Int = 10
+    private let limitOfBreedPerPage: Int = 5
     private var pageId: Int = 0
     private var endOfDataReached: Bool = false
 
@@ -33,22 +31,24 @@ final class BreedListViewModel: ObservableObject {
         viewState == .fetching
     }
 
-    init() {
+    init(breed: Breed) {
         let httpClient = URLSessionClient(session: URLSession.shared, scheme: "https", baseUrl: Constants.apiBaseUrl)
-        self.breedService = BreedService(remoteRepository: BreedRemoteRepository(httpClient: httpClient),
-                                    localRepository: RealmLocalRepository())
+        self.imageService = ImageService(remoteRepository: ImageRemoteRepository(httpClient: httpClient),
+                                         localRepository: RealmLocalRepository())
         self.networkService = NetworkService.shared
+        self.breed = breed
     }
 
-    init(breedService: BreedService, networkService: NetworkService) {
-        self.breedService = breedService
+    init(breed: Breed, imageService: ImageService, networkService: NetworkService) {
+        self.imageService = imageService
         self.networkService = networkService
+        self.breed = breed
     }
 
     // MARK: Public Methods
 
     @MainActor
-    func fetchNextBreeds() async {
+    func fetchNextImages() async {
         guard self.endOfDataReached == false, !self.isFetching else {
             return
         }
@@ -57,36 +57,41 @@ final class BreedListViewModel: ObservableObject {
 
         defer { self.viewState = .finished }
 
-        await self.getBreeds()
+        await self.getImages()
     }
 
     @MainActor
-    func fetchBreeds() async {
-        await self.resetData()
+    func fetchImages() async {
+        self.resetData()
         self.viewState = .loading
 
         defer { self.viewState = .finished }
 
-        await self.getBreeds()
+        await self.getImages()
     }
 
-    func hasReachedEnd(of breed: Breed) -> Bool {
-        return breeds.last?.id == breed.id
+    func hasReachedEnd(of image: BreedImage) -> Bool {
+        return breed.images.last?.id == image.id
     }
 
     // MARK: Private Methods
 
-    private func resetData() async {
+    @MainActor
+    private func resetData() {
         self.endOfDataReached = false
         self.pageId = 0
         if self.networkService.networkStatus == .satisfied {
-            self.breedService.deleteBreeds(breeds: Array(breeds))
+            self.imageService.deleteBreedImages(to: breed)
         }
     }
 
-    private func getBreeds() async {
+    @MainActor
+    private func getImages() async {
         do {
-            try await self.breedService.fetchBreeds(limitOfBreed: limitOfBreedPerPage, pageId: pageId)
+            try await self.imageService.fetchBreedImages(breed: self.breed,
+                                                         limitOfImage: limitOfBreedPerPage,
+                                                         pageId: self.pageId, includeBreeds: false,
+                                                         imageSize: BreedImage.Size.med.rawValue)
         } catch {
             if let dataError = error as? DataError, dataError == .emptyData {
                 self.endOfDataReached = true
@@ -104,7 +109,7 @@ final class BreedListViewModel: ObservableObject {
 
                 }
             }
-            print("❌ BreedListViewMobel.fetchBreeds error: \(error)")
+            print("❌ BreedDetailsViewModel.getImages error: \(error)")
         }
     }
 
@@ -112,7 +117,7 @@ final class BreedListViewModel: ObservableObject {
 
 // MARK: - Extension
 
-extension BreedListViewModel {
+extension BreedDetailsViewModel {
 
     enum ViewState {
         case fetching

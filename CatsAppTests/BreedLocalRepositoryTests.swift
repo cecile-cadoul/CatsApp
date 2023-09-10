@@ -25,14 +25,9 @@ final class BreedLocalRepositoryTests: XCTestCase {
     }
 
     func testSaveBreedWithSuccess() throws {
-        let breeds = Breed.mockedData
+        let breed = Breed.mockedData
 
-        guard let breed = breeds.first else {
-            XCTFail("Reference data is missing.")
-            return
-        }
-
-        self.localRepository.saveData(data: breeds)
+        self.localRepository.saveData(data: [breed])
 
         do {
             let realm = try Realm()

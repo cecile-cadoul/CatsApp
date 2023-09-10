@@ -30,18 +30,18 @@ final class BreedRemoteRepositoryTests: XCTestCase {
 
     @MainActor
     func testDecodeBreedWithSuccess() async throws {
-        let mockBreeds = Breed.mockedData
+        let mockBreed = Breed.mockedData
         let breedsResponse = try await self.remoteRepository.getBreeds(limitOfBreed: 3, pageId: 0)
 
-        guard let refBreed = mockBreeds.first, let dataBreed = breedsResponse.first else {
+        guard let dataBreed = breedsResponse.first else {
             XCTFail("❌ Failed to decode correctly")
             return
         }
-        XCTAssertEqual(refBreed.id, dataBreed.id)
-        XCTAssertEqual(refBreed.name, dataBreed.name)
-        XCTAssertEqual(refBreed.breedDescription, dataBreed.breedDescription)
-        XCTAssertEqual(refBreed.indoor, dataBreed.indoor)
-        XCTAssertEqual(refBreed.referenceImageId, dataBreed.referenceImageId)
+        XCTAssertEqual(mockBreed.id, dataBreed.id)
+        XCTAssertEqual(mockBreed.name, dataBreed.name)
+        XCTAssertEqual(mockBreed.breedDescription, dataBreed.breedDescription)
+        XCTAssertEqual(mockBreed.indoor, dataBreed.indoor)
+        XCTAssertEqual(mockBreed.referenceImageId, dataBreed.referenceImageId)
     }
 
 }
